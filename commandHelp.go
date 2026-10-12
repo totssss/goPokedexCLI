@@ -6,9 +6,9 @@ import (
 
 func commandHelp(cfg *config) error {
 	fmt.Println()
-	fmt.Print("Welcome to the Pokedex!")
-	fmt.Print("Usage:")
-	fmt.Print()
+	fmt.Println("Welcome to the Pokedex!")
+	fmt.Println("Usage:")
+	fmt.Println()
 	for _, cmd := range cfg.commandRegistry {
 		fmt.Printf("%v: %v\n", cmd.name, cmd.description)
 	}
