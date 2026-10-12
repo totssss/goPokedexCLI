@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"gitlab.insa-rouen.fr/tsavary/goPokedexCLI/internal/pokeapi"
 )
 
 func commandMap(cfg *config) error {
@@ -22,7 +21,7 @@ func commandMapGeneral(url string, cfg *config) error {
 		return errors.New("pageUrl should never be empty")
 	}
 
-	locationResponse, err := pokeapi.RequestLocations(url)
+	locationResponse, err := cfg.client.RequestLocations(url)
 
 	if err != nil {
 		return err
