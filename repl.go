@@ -25,9 +25,13 @@ func startRepl(cfg *config) {
 		}
 
 		commandName := words[0]
+		args := []string{}
+		if len(words) > 1 {
+			args = words[1:]
+		}
 
 		if command, ok := getCommands()[commandName]; ok {
-			command.callback(cfg)
+			command.callback(cfg, args...)
 		} else {
 			fmt.Println("Unknown command")
 		}
