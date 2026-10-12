@@ -1,6 +1,6 @@
 package main
 
-import "gopokedexcli/internal/pokeapi"
+import "gitlab.insa-rouen.fr/tsavary/goPokedexCLI/internal/pokeapi"
 
 type config struct {
 	commandRegistry map[string]cliCommand

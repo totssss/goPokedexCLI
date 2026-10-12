@@ -3,7 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
-	"gopokedexcli/internal/pokeapi"
+	"gitlab.insa-rouen.fr/tsavary/goPokedexCLI/internal/pokeapi"
 )
 
 func commandMap(cfg *config) error {
