@@ -18,7 +18,7 @@ func main() {
 		commandRegistry: getCommands(),
 		nextMapUrL:      pokeapi.BaseLocationURL,
 		previousMapUrl:  "",
-		client:          pokeapi.NewClient(5 * time.Second),
+		client:          pokeapi.NewClient(5*time.Second, 5*time.Minute),
 	}
 	startRepl(config)
 }
