@@ -8,6 +8,7 @@ import (
 )
 
 const (
+	BasePokemonURL  = "https://pokeapi.co/api/v2/pokemon/"
 	BaseLocationURL = "https://pokeapi.co/api/v2/location-area"
 )
 
