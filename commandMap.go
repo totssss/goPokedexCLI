@@ -21,7 +21,7 @@ func commandMapGeneral(url string, cfg *config) error {
 		return errors.New("pageUrl should never be empty")
 	}
 
-	locationResponse, err := cfg.client.RequestLocations(url)
+	locationResponse, err := cfg.client.GetLocationsPage(url)
 
 	if err != nil {
 		return err
