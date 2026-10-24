@@ -8,6 +8,7 @@ import (
 
 type config struct {
 	commandRegistry map[string]cliCommand
+	pokedex         map[string]pokeapi.Pokemon
 	nextMapUrL      string
 	previousMapUrl  string
 	client          pokeapi.Client
@@ -16,6 +17,7 @@ type config struct {
 func main() {
 	config := &config{
 		commandRegistry: getCommands(),
+		pokedex:         make(map[string]pokeapi.Pokemon),
 		nextMapUrL:      pokeapi.BaseLocationURL,
 		previousMapUrl:  "",
 		client:          pokeapi.NewClient(5*time.Second, 5*time.Minute),
